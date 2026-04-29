@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Createyourviewshere.
+# Variáveis globais da enquete
+PERGUNTA = "Qual o seu gênero musical preferido?"
+ALTERNATIVAS = ["rock", "indie", "pop", "folk"]
+
 def index(request):
-    return HttpResponse("<h1> Bem-vindo(a) à aplicação Enquete</h1>")
+    context = {
+        'pergunta': PERGUNTA,
+        'alternativas': ALTERNATIVAS,
+    }
+    return render(request, 'index.html', context)
