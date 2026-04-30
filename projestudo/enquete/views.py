@@ -11,3 +11,6 @@ def index(request):
         'alternativas': ALTERNATIVAS,
     }
     return render(request, 'index.html', context)
+
+def votar(request):
+    return HttpResponse("OI, VOTO REGISTRADO!")
