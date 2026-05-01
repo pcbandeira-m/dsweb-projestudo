@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views
 
+app_name = "imc"
+
 urlpatterns = [
     path("", views.index, name="index"),
-    path("calcular/", views.calcular_imc, name="calcular_imc" ),
+    path("calcular_novo/", views.calcular, name="calcular" ),
 ]

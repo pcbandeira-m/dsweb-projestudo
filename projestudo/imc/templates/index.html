@@ -17,7 +17,8 @@
                 <div class="columns is-centered">
                     <div class="column is-4-desktop is-6-tablet is-10-mobile">
                         
-                        <form class="box p-6" action="calcular/">
+                        <form id="imc-form" action="{% url 'imc:calcular' %}" method="post">
+                            {% csrf_token %}
                             <h1 class="title has-text-centered has-text-primary-dark">
                                 Calculadora de IMC
                             </h1>
